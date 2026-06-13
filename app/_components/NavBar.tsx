@@ -10,7 +10,7 @@ type NavBarProps = {
   locale: Locale
   nav: {
     projects: string
-    playground: string
+    resume: string
     experience: string
     contact: string
     localeLabel: string
@@ -27,7 +27,7 @@ export const NavBar = ({ locale, nav }: NavBarProps) => {
         <a href="#projects">{nav.projects}</a>
       </Button>
       <Button variant="ghost" size="sm" asChild>
-        <a href="#playground">{nav.playground}</a>
+        <a href="#resume">{nav.resume}</a>
       </Button>
       <Button variant="ghost" size="sm" asChild>
         <a href="#experience">{nav.experience}</a>
