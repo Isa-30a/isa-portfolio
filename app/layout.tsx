@@ -1,4 +1,5 @@
 import { Geist_Mono, Inter, Space_Grotesk } from "next/font/google"
+import { headers } from "next/headers"
 
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
@@ -25,14 +26,17 @@ export const metadata = {
     "Portfolio for a frontend engineer focused on AI products, motion, and polished project showcases.",
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  const requestHeaders = await headers()
+  const locale = requestHeaders.get("x-locale") ?? "en"
+
   return (
     <html
-      lang="en"
+      lang={locale}
       suppressHydrationWarning
       className={cn(
         "antialiased",
