@@ -1,0 +1,423 @@
+{
+  "picture": {
+    "hidden": false,
+    "url": "",
+    "size": 64,
+    "rotation": 0,
+    "aspectRatio": 1,
+    "borderRadius": 0,
+    "borderColor": "rgba(0, 0, 0, 0)",
+    "borderWidth": 0,
+    "shadowColor": "rgba(0, 0, 0, 0.5)",
+    "shadowWidth": 0
+  },
+  "basics": {
+    "name": "Isabella Alvarado",
+    "headline": "",
+    "email": "isabella.alvasol@gmail.com",
+    "phone": "+57 3052593960",
+    "location": "",
+    "website": {
+      "url": "",
+      "label": ""
+    },
+    "customFields": []
+  },
+  "summary": {
+    "title": "Summary",
+    "icon": "",
+    "columns": 1,
+    "hidden": false,
+    "content": ""
+  },
+  "sections": {
+    "profiles": {
+      "title": "Profiles",
+      "icon": "",
+      "columns": 2,
+      "hidden": false,
+      "items": [
+        {
+          "id": "ihe4k8mk8o2jmmek6odmd8qt",
+          "hidden": false,
+          "icon": "linkedin",
+          "iconColor": "",
+          "network": "Linkedin",
+          "username": "Isabella Alvarado ",
+          "website": {
+            "url": "https://www.linkedin.com/in/isabella-alvarado-43a46a287/",
+            "label": "",
+            "inlineLink": false
+          }
+        },
+        {
+          "id": "avjfpne23ccei0dquo33qfs4",
+          "hidden": false,
+          "icon": "github",
+          "iconColor": "",
+          "network": "GitHub",
+          "username": "Isa-30a",
+          "website": {
+            "url": "https://github.com/Isa-30a",
+            "label": "",
+            "inlineLink": false
+          }
+        }
+      ]
+    },
+    "experience": {
+      "title": "Experience",
+      "icon": "",
+      "columns": 1,
+      "hidden": false,
+      "items": [
+        {
+          "id": "019eb73a-5382-746b-8606-6349a5e292a7",
+          "hidden": false,
+          "company": "Vention Inc",
+          "position": "Intern",
+          "location": "Canada",
+          "period": "august 2025 - august 2026",
+          "website": {
+            "url": "https://vention.io/",
+            "label": "",
+            "inlineLink": false
+          },
+          "description": "<p>Served as Full Stack Developer, performing the following duties: developing and refactoring platform features into unified, reusable modules; authoring scope documents with sequence diagrams to define requirements before implementation; building solutions full-stack with React, Next.js, Ruby on Rails, and GraphQL; writing unit and end-to-end tests for critical user flows; and reviewing pull requests to uphold code quality, all within a Scrum workflow.</p><p>Stood out for taking on critical, production-facing systems, navigating a steep learning curve while making sound architectural decisions and documenting her work with consistent rigor.</p>",
+          "roles": []
+        },
+        {
+          "id": "019eb74a-2573-718a-aaa8-bc8031325c1f",
+          "hidden": false,
+          "company": "Ples",
+          "position": "Mobile Developer",
+          "location": "",
+          "period": "may 2025 - july 2025",
+          "website": {
+            "url": "https://ples.com.co",
+            "label": "",
+            "inlineLink": false
+          },
+          "description": "<p>I contributed by building a offline-first mobile app that served as a companion app for a Property Registry System for Colombian monicipalities.  It was built with Flutter and SQLite. It allowed people to save property records on low connectivity areas, and sync them back to the system once they had a stable connection to the internet.</p>",
+          "roles": []
+        }
+      ]
+    },
+    "education": {
+      "title": "Education",
+      "icon": "",
+      "columns": 1,
+      "hidden": false,
+      "items": [
+        {
+          "id": "zvhzf934mo1us8s21ig1i1m8",
+          "hidden": false,
+          "school": "University Of Cartagena",
+          "degree": "Bachelor of Computer Engineering",
+          "area": "",
+          "grade": "4.2/5",
+          "location": "",
+          "period": "2021 - Present",
+          "website": {
+            "url": "https://www.unicartagena.edu.co",
+            "label": "",
+            "inlineLink": false
+          },
+          "description": "<p><strong>Expected graduation date: </strong>September 2026<br><strong>Relevant coursework: </strong>Object Oriented Programming, Software Engineering, Database design, Cybersecurity, Algorithms and Data Structures, Internet Service Engineering, Operating Systems, Networking, Software Architecture.</p>"
+        }
+      ]
+    },
+    "projects": {
+      "title": "Projects",
+      "icon": "",
+      "columns": 1,
+      "hidden": false,
+      "items": [
+        {
+          "id": "g2qbcd61iji1rnj21wseuh7v",
+          "hidden": false,
+          "name": "Delivery U",
+          "period": "April 2024 - May 2024",
+          "website": {
+            "url": "",
+            "label": "",
+            "inlineLink": false
+          },
+          "description": "<p>Delivery U is an application for delivering food inside a university campus. The project aimed to develop a mobile app to help students with mobility issues and provide income opportunities for others. I developed the front-end using Flutter and MaterialDesign and I was responsible for deploying the backend and the database in Docker.</p>"
+        },
+        {
+          "id": "ao5jptewbke69hu7fuoq971g",
+          "hidden": false,
+          "name": "Web System for Business Internship Management",
+          "period": "September 22 - December 15 2024",
+          "website": {
+            "url": "",
+            "label": "",
+            "inlineLink": false
+          },
+          "description": "<p>I worked on the development of a module for managing business internships, where I took the role of a frontend developer using Vue.js and the PrimeVue design system. The project aimed to improve the efficiency of handling internship agreements, offers, and commitment letters between the university and external companies.</p><p>My contributions focused mainly on implementing the features for creating and approving commitment letters, internship offer listings, and some of the initial public-facing pages. I also collaborated with the team using GitHub Projects for task management and participated in joint decision-making regarding the design and direction of the project.</p>"
+        }
+      ]
+    },
+    "skills": {
+      "title": "Skills",
+      "icon": "",
+      "columns": 4,
+      "hidden": true,
+      "items": [
+        {
+          "id": "b29lwjutqvbeicu5j5xfp6qq",
+          "hidden": false,
+          "icon": "",
+          "iconColor": "",
+          "name": "Flutter",
+          "proficiency": "",
+          "level": 0,
+          "keywords": []
+        },
+        {
+          "id": "u0xi78r5pcvi91hjaku2ofyx",
+          "hidden": false,
+          "icon": "",
+          "iconColor": "",
+          "name": "Java",
+          "proficiency": "",
+          "level": 0,
+          "keywords": []
+        },
+        {
+          "id": "ycmmzphzbb36f2ahtrikeqw4",
+          "hidden": false,
+          "icon": "",
+          "iconColor": "",
+          "name": "HTML",
+          "proficiency": "",
+          "level": 0,
+          "keywords": []
+        },
+        {
+          "id": "zzjpixw8cloqsrpx1xxtda9c",
+          "hidden": false,
+          "icon": "",
+          "iconColor": "",
+          "name": "CSS",
+          "proficiency": "",
+          "level": 0,
+          "keywords": []
+        },
+        {
+          "id": "dlt2rpdxh0lfmjqr7b92xcbv",
+          "hidden": false,
+          "icon": "",
+          "iconColor": "",
+          "name": "Python",
+          "proficiency": "",
+          "level": 0,
+          "keywords": []
+        },
+        {
+          "id": "al9vk50xtign1f9wufdz1cnj",
+          "hidden": false,
+          "icon": "",
+          "iconColor": "",
+          "name": "Docker",
+          "proficiency": "",
+          "level": 0,
+          "keywords": []
+        },
+        {
+          "id": "nu34o5b1unqfznesx4v5do11",
+          "hidden": false,
+          "icon": "",
+          "iconColor": "",
+          "name": "Javascript",
+          "proficiency": "",
+          "level": 0,
+          "keywords": []
+        },
+        {
+          "id": "019ebf31-77d2-71f7-8fd1-abb879255cce",
+          "hidden": false,
+          "icon": "acorn",
+          "iconColor": "",
+          "name": "NextJS",
+          "proficiency": "",
+          "level": 0,
+          "keywords": []
+        },
+        {
+          "id": "019ebf31-c760-72fc-ace5-5f006b709090",
+          "hidden": false,
+          "icon": "acorn",
+          "iconColor": "",
+          "name": "Ruby on rails",
+          "proficiency": "",
+          "level": 0,
+          "keywords": []
+        }
+      ]
+    },
+    "languages": {
+      "title": "Languages",
+      "icon": "",
+      "columns": 2,
+      "hidden": false,
+      "items": [
+        {
+          "id": "j664926g8suybw7ejwuuloit",
+          "hidden": false,
+          "language": "Spanish",
+          "fluency": "Native language",
+          "level": 0
+        },
+        {
+          "id": "s3zo94klk4p069oi70mkmmig",
+          "hidden": false,
+          "language": "English ",
+          "fluency": "Conversational",
+          "level": 0
+        }
+      ]
+    },
+    "interests": {
+      "title": "Interests",
+      "icon": "",
+      "columns": 1,
+      "hidden": false,
+      "items": []
+    },
+    "awards": {
+      "title": "Awards",
+      "icon": "",
+      "columns": 1,
+      "hidden": false,
+      "items": []
+    },
+    "certifications": {
+      "title": "Certifications",
+      "icon": "",
+      "columns": 1,
+      "hidden": false,
+      "items": [
+        {
+          "id": "piw988v651hxkw0oqlbg4hzd",
+          "hidden": true,
+          "title": "Python 101 for Data Science",
+          "issuer": "IBM",
+          "date": "September 2023",
+          "website": {
+            "url": "https://courses.cognitiveclass.ai/certificates/3b7dcc2fef24470f972bffa05566f7bf",
+            "label": "",
+            "inlineLink": false
+          },
+          "description": ""
+        },
+        {
+          "id": "dvnzhoed5ryqewmjahhugah5",
+          "hidden": true,
+          "title": "Analitica de Datos",
+          "issuer": "University of Fransisco Jose Of Caldas",
+          "date": "April 2024",
+          "website": {
+            "url": "",
+            "label": "",
+            "inlineLink": false
+          },
+          "description": ""
+        }
+      ]
+    },
+    "publications": {
+      "title": "Publications",
+      "icon": "",
+      "columns": 1,
+      "hidden": false,
+      "items": []
+    },
+    "volunteer": {
+      "title": "Volunteering",
+      "icon": "",
+      "columns": 1,
+      "hidden": false,
+      "items": []
+    },
+    "references": {
+      "title": "References",
+      "icon": "",
+      "columns": 1,
+      "hidden": false,
+      "items": []
+    }
+  },
+  "customSections": [],
+  "metadata": {
+    "template": "kakuna",
+    "layout": {
+      "sidebarWidth": 35,
+      "pages": [
+        {
+          "fullWidth": false,
+          "main": [
+            "profiles",
+            "education",
+            "experience",
+            "certifications",
+            "projects",
+            "languages",
+            "skills",
+            "interests",
+            "awards",
+            "publications",
+            "volunteer",
+            "references"
+          ],
+          "sidebar": []
+        }
+      ]
+    },
+    "page": {
+      "gapX": 4,
+      "gapY": 6,
+      "marginX": 18,
+      "marginY": 18,
+      "format": "free-form",
+      "locale": "en-US",
+      "hideLinkUnderline": false,
+      "hideIcons": false,
+      "hideSectionIcons": true
+    },
+    "design": {
+      "level": {
+        "icon": "star",
+        "type": "circle"
+      },
+      "colors": {
+        "primary": "rgba(74, 85, 101, 1)",
+        "text": "rgba(0, 0, 0, 1)",
+        "background": "rgba(255, 255, 255, 1)"
+      }
+    },
+    "typography": {
+      "body": {
+        "fontFamily": "IBM Plex Serif",
+        "fontWeights": [
+          "400",
+          "400",
+          "600"
+        ],
+        "fontSize": 10.5,
+        "lineHeight": 1.5
+      },
+      "heading": {
+        "fontFamily": "IBM Plex Serif",
+        "fontWeights": [
+          "600"
+        ],
+        "fontSize": 13.5,
+        "lineHeight": 1.5
+      }
+    },
+    "notes": "",
+    "styleRules": []
+  }
+}
