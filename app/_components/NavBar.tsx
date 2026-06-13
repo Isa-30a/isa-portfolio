@@ -1,30 +1,33 @@
-import {
-  Menubar,
-  MenubarContent,
-  MenubarGroup,
-  MenubarItem,
-  MenubarMenu,
-  MenubarSeparator,
-  MenubarShortcut,
-  MenubarTrigger,
-} from "@/components/ui/menubar"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+"use client"
 
-export type NavBarProps = {}
-export const NavBar = (props: NavBarProps) => {
+import { useTheme } from "next-themes"
+
+import { Button } from "@/components/ui/button"
+
+export const NavBar = () => {
+  const { resolvedTheme, setTheme } = useTheme()
+
   return (
-    <Tabs defaultValue="Github" className="justify-end border-none">
-      <TabsList>
-        <TabsTrigger value="Github">Github</TabsTrigger>
-        <TabsTrigger value="Resume">Resume</TabsTrigger>
-        <TabsTrigger value="View">View Projects</TabsTrigger>
-      </TabsList>
-
-      <TabsContent value="Github">
-        Make changes to your account here.
-      </TabsContent>
-      <TabsContent value="Resume">Change your password here.</TabsContent>
-      <TabsContent value="View">View your projects here.</TabsContent>
-    </Tabs>
+    <div className="flex flex-wrap items-center gap-2">
+      <Button variant="ghost" size="sm" asChild>
+        <a href="#projects">Projects</a>
+      </Button>
+      <Button variant="ghost" size="sm" asChild>
+        <a href="#playground">Playground</a>
+      </Button>
+      <Button variant="ghost" size="sm" asChild>
+        <a href="#experience">Experience</a>
+      </Button>
+      <Button variant="ghost" size="sm" asChild>
+        <a href="#contact">Contact</a>
+      </Button>
+      <Button
+        variant="outline"
+        size="sm"
+        onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
+      >
+        {resolvedTheme === "dark" ? "Light mode" : "Dark mode"}
+      </Button>
+    </div>
   )
 }
