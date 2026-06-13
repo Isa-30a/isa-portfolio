@@ -21,9 +21,9 @@ const fontMono = Geist_Mono({
 })
 
 export const metadata = {
-  title: "Isabella | Frontend Engineer",
+  title: "Isabella Alvarado | Frontend Engineer",
   description:
-    "Portfolio for a frontend engineer focused on AI products, motion, and polished project showcases.",
+    "Simple portfolio with resume data, selected work, and direct contact links.",
 }
 
 export default async function RootLayout({
