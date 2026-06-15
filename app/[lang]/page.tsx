@@ -1,5 +1,5 @@
 import { HugeiconsIcon } from "@hugeicons/react"
-import { Download01Icon, Globe02Icon, Link04Icon, User03Icon } from "@hugeicons/core-free-icons"
+import { Globe02Icon, Link04Icon, User03Icon } from "@hugeicons/core-free-icons"
 import { notFound } from "next/navigation"
 
 import { Button } from "@/components/ui/button"
@@ -13,7 +13,7 @@ import {
 import { NavBar } from "../_components/NavBar"
 import { isLocale, type Locale } from "@/lib/i18n"
 import { portfolioContent } from "@/lib/portfolio-content"
-import { resumeData, resumePdfPath } from "@/lib/resume"
+import { resumeData } from "@/lib/resume"
 
 export default async function Page({
   params,
@@ -151,12 +151,6 @@ export default async function Page({
               </div>
 
               <div className="flex flex-wrap gap-3">
-                <Button asChild size="sm">
-                  <a href={resumePdfPath} download className="inline-flex items-center gap-2">
-                    <HugeiconsIcon icon={Download01Icon} size={16} color="currentColor" strokeWidth={1.6} />
-                    {content.resume.downloadLabel}
-                  </a>
-                </Button>
                 <Button asChild variant="outline" size="sm">
                   <a href={`mailto:${resumeData.basics.email}`}>
                     {content.contact.email}
@@ -273,12 +267,6 @@ export default async function Page({
                   ))}
                 </div>
 
-                <Button asChild className="w-full" variant="outline">
-                  <a href={resumePdfPath} download className="inline-flex items-center justify-center gap-2">
-                    <HugeiconsIcon icon={Download01Icon} size={16} color="currentColor" strokeWidth={1.6} />
-                    {content.resume.downloadLabel}
-                  </a>
-                </Button>
               </CardContent>
             </Card>
 
@@ -394,12 +382,7 @@ export default async function Page({
                     {content.contact.github}
                   </a>
                 </Button>
-                <Button asChild variant="ghost" size="lg">
-                  <a href={resumePdfPath} download className="inline-flex items-center gap-2">
-                    <HugeiconsIcon icon={Download01Icon} size={16} color="currentColor" strokeWidth={1.6} />
-                    {content.contact.resume}
-                  </a>
-                </Button>
+
               </div>
             </CardContent>
           </Card>
