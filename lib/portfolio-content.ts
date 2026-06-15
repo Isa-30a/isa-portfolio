@@ -67,14 +67,15 @@ export const portfolioContent = {
       eyebrow: "Frontend engineer",
       title: "Frontend Engineer with Full-Stack Reach",
       description:
-        "I'm a frontend engineer focused on simple layouts, readable content, and building things that work.",
+        "Frontend Developer and recent Computer Systems Engineering graduate with a strong focus on Next.js, React, Vue, and TypeScript. Passionate about building intuitive, accessible, and user-centered digital experiences that solve real-world problems and create meaningful impact for users.",
       primaryAction: "View work",
       secondaryAction: "Open resume",
       tertiaryAction: "Contact",
       cards: [
         {
           title: "Frontend Engineer",
-          description: "Building with React, Next.js, and modern web technologies.",
+          description:
+            "Building with React, Next.js, and modern web technologies.",
         },
         {
           title: "Full-Stack Thinking",
@@ -131,14 +132,15 @@ export const portfolioContent = {
       eyebrow: "Ingeniera frontend",
       title: "Ingeniera Frontend con Alcance Full-Stack",
       description:
-        "Soy ingeniera frontend enfocada en estructuras limpias, contenido legible y construir cosas que funcionan.",
+        "Frontend Developer recién graduada especializada en Next.js, React, Vue y TypeScript. Apasionada por crear experiencias digitales intuitivas, accesibles y centradas en el usuario, transformando problemas reales en soluciones que generan impacto.",
       primaryAction: "Ver trabajo",
       secondaryAction: "Abrir CV",
       tertiaryAction: "Contacto",
       cards: [
         {
           title: "Ingeniera Frontend",
-          description: "Construyendo con React, Next.js y tecnologías modernas.",
+          description:
+            "Construyendo con React, Next.js y tecnologías modernas.",
         },
         {
           title: "Pensamiento Full-Stack",
