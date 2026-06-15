@@ -161,6 +161,26 @@ export default async function Page({
           </Card>
         </section>
 
+        <section id="about" className="space-y-6">
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+            <div>
+              <p className="text-xs font-medium tracking-[0.24em] text-muted-foreground uppercase">
+                {content.about.eyebrow}
+              </p>
+              <h2 className="mt-2 font-heading text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
+                {content.about.title}
+              </h2>
+            </div>
+          </div>
+          <div className="space-y-4">
+            {content.about.paragraphs.map((paragraph, i) => (
+              <p key={i} className="max-w-3xl text-sm leading-7 text-muted-foreground">
+                {paragraph}
+              </p>
+            ))}
+          </div>
+        </section>
+
         <section id="projects" className="space-y-6">
           <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
             <div>
