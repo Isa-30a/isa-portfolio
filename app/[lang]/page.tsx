@@ -380,57 +380,43 @@ export default async function Page({
           </div>
         </section>
 
-        <section
-          id="experience"
-          className="grid gap-6 lg:grid-cols-[0.92fr_1.08fr]"
-        >
-          <Card className="border-white/10 bg-white/5">
-            <CardContent className="space-y-4 p-6">
+        <section id="experience" className="space-y-6">
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+            <div>
               <p className="text-xs font-medium tracking-[0.24em] text-muted-foreground uppercase">
-                {content.skills.eyebrow}
+                {content.experience.eyebrow}
               </p>
-              <h2 className="font-heading text-3xl font-semibold tracking-tight text-foreground">
-                {content.skills.title}
-              </h2>
-              {content.skills.description ? (
-                <p className="text-sm leading-6 text-muted-foreground">
-                  {content.skills.description}
-                </p>
-              ) : null}
-            </CardContent>
-          </Card>
-
-          <div className="space-y-4">
-            <p className="text-xs font-medium tracking-[0.24em] text-muted-foreground uppercase">
-              {content.experience.eyebrow}
-            </p>
-            <div className="space-y-3">
-              <h2 className="font-heading text-3xl font-semibold tracking-tight text-foreground">
+              <h2 className="mt-2 font-heading text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
                 {content.experience.title}
               </h2>
-              {content.experience.description ? (
-                <p className="max-w-2xl text-sm leading-6 text-muted-foreground">
-                  {content.experience.description}
-                </p>
-              ) : null}
             </div>
-            <div className="space-y-4">
-              {resumeData.experience.map((item) => (
-                <Card key={item.title} className="border-white/10 bg-white/5">
-                  <CardContent className="flex gap-4 p-5">
-                    <div className="mt-1 h-3 w-3 rounded-full bg-primary shadow-[0_0_0_6px_rgba(125,211,192,0.15)]" />
-                    <div className="space-y-3">
-                      <p className="font-heading text-lg font-semibold text-foreground">
-                        {item.title}
-                      </p>
-                      <p className="text-sm leading-6 text-muted-foreground">
-                        {item.detail}
-                      </p>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
+            {content.experience.description ? (
+              <p className="max-w-xl text-sm leading-6 text-muted-foreground">
+                {content.experience.description}
+              </p>
+            ) : null}
+          </div>
+
+          <div className="relative space-y-0">
+            <div className="absolute left-4 top-2 bottom-2 w-px bg-white/10" />
+            {resumeData.experience.map((item) => (
+              <div key={item.title} className="relative flex gap-6 pb-10 last:pb-0">
+                <div className="relative z-10 mt-1.5 flex size-8 items-center justify-center rounded-full border border-white/10 bg-background">
+                  <div className="size-2 rounded-full bg-primary" />
+                </div>
+                <div className="flex-1 space-y-2 pt-1">
+                  <p className="text-xs font-medium tracking-[0.24em] text-muted-foreground uppercase">
+                    {item.meta}
+                  </p>
+                  <p className="font-heading text-lg font-semibold text-foreground">
+                    {item.title}
+                  </p>
+                  <p className="text-sm leading-6 text-muted-foreground">
+                    {item.detail}
+                  </p>
+                </div>
+              </div>
+            ))}
           </div>
         </section>
 
