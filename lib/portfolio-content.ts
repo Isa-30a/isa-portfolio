@@ -65,23 +65,29 @@ export const portfolioContent = {
     },
     hero: {
       eyebrow: "Frontend engineer",
-      title: "I design calm, clear portfolio experiences that feel easy to read.",
+      title:
+        "I design calm, clear portfolio experiences that feel easy to read.",
       description:
         "Isabella is a frontend engineer focused on simple layouts, readable content, and a portfolio that gets out of the way of the work.",
       primaryAction: "View work",
       secondaryAction: "Open resume",
       tertiaryAction: "Contact",
       cards: [
-        { title: "Readable", description: "Content first, with a quieter visual system" },
+        {
+          title: "Readable",
+          description: "Content first, with a quieter visual system",
+        },
         { title: "Direct", description: "Less ceremony, fewer moving parts" },
-        { title: "Practical", description: "Resume, projects, and contact in one pass" },
+        {
+          title: "Practical",
+          description: "Resume, projects, and contact in one pass",
+        },
       ],
     },
     resume: {
       eyebrow: "Resume",
-      title: "A living snapshot of the structured resume data.",
-      description:
-        "The page reads the local rxresu.me JSON and presents the same core information in a simpler web layout.",
+      title: "Resume",
+      description: "",
       downloadLabel: "Download PDF",
       profileLabel: "Profiles",
       educationLabel: "Education",
@@ -89,25 +95,23 @@ export const portfolioContent = {
     },
     projects: {
       eyebrow: "Selected work",
-      title: "Projects shown with only the useful detail.",
-      description:
-        "These cards come from the resume data and keep the structure compact enough to scan quickly.",
+      title: "Projects",
+      description: "",
     },
     skills: {
       eyebrow: "Skills",
       title: "Tools and languages",
-      description: "A compact list of the technologies already present in the resume JSON.",
+      description: "",
     },
     experience: {
       eyebrow: "Experience",
-      title: "Experience from the resume data",
-      description:
-        "The same work history appears here with lighter presentation and fewer visual distractions.",
+      title: "Experience",
+      description: "",
     },
     contact: {
       eyebrow: "Contact",
       title: "Reach out",
-      description: "Use the direct links below if you want the page to stay on one screen.",
+      description: "",
       email: "Email",
       github: "GitHub",
       resume: "Resume",
@@ -130,16 +134,24 @@ export const portfolioContent = {
       secondaryAction: "Abrir CV",
       tertiaryAction: "Contacto",
       cards: [
-        { title: "Legible", description: "Contenido primero y sistema visual contenido" },
-        { title: "Directo", description: "Menos ruido, menos capas, menos fricción" },
-        { title: "Práctico", description: "CV, proyectos y contacto en una sola vista" },
+        {
+          title: "Legible",
+          description: "Contenido primero y sistema visual contenido",
+        },
+        {
+          title: "Directo",
+          description: "Menos ruido, menos capas, menos fricción",
+        },
+        {
+          title: "Práctico",
+          description: "CV, proyectos y contacto en una sola vista",
+        },
       ],
     },
     resume: {
       eyebrow: "CV",
-      title: "Una vista breve de los datos del CV.",
-      description:
-        "La página lee el JSON local de rxresu.me y lo presenta en una composición más simple.",
+      title: "CV",
+      description: "",
       downloadLabel: "Descargar PDF",
       profileLabel: "Perfiles",
       educationLabel: "Educación",
@@ -147,27 +159,23 @@ export const portfolioContent = {
     },
     projects: {
       eyebrow: "Trabajo seleccionado",
-      title: "Proyectos con sólo lo que sirve.",
-      description:
-        "Estas tarjetas salen del JSON del CV y mantienen la lectura rápida.",
+      title: "Proyectos",
+      description: "",
     },
     skills: {
       eyebrow: "Habilidades",
       title: "Herramientas y lenguajes",
-      description:
-        "Un resumen compacto de las tecnologías que ya aparecen en el CV local.",
+      description: "",
     },
     experience: {
       eyebrow: "Experiencia",
-      title: "Experiencia del CV",
-      description:
-        "La misma historia laboral, con una composición más sobria y directa.",
+      title: "Experiencia",
+      description: "",
     },
     contact: {
       eyebrow: "Contacto",
       title: "Escríbeme",
-      description:
-        "Los enlaces directos mantienen la página útil incluso si no bajas el PDF.",
+      description: "",
       email: "Correo",
       github: "GitHub",
       resume: "CV",

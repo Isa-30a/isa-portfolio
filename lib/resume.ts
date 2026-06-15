@@ -98,7 +98,10 @@ export type ResumeData = {
 const resume = resumeJson as ResumeJson
 
 const stripHtml = (value: string) =>
-  value.replace(/<[^>]+>/g, "").replace(/\s+/g, " ").trim()
+  value
+    .replace(/<[^>]+>/g, "")
+    .replace(/\s+/g, " ")
+    .trim()
 
 export const resumePdfPath = "/resume-isabella-alvarado.pdf"
 

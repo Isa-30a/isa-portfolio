@@ -1,9 +1,15 @@
 import { HugeiconsIcon } from "@hugeicons/react"
-import { Globe02Icon, Link04Icon, User03Icon } from "@hugeicons/core-free-icons"
+import { Download01Icon, Globe02Icon, Link04Icon, User03Icon } from "@hugeicons/core-free-icons"
 import { notFound } from "next/navigation"
 
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card"
 import { NavBar } from "../_components/NavBar"
 import { isLocale, type Locale } from "@/lib/i18n"
 import { portfolioContent } from "@/lib/portfolio-content"
@@ -32,7 +38,12 @@ export default async function Page({
           <div className="flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
             <a href="#top" className="group inline-flex items-center gap-3">
               <span className="flex size-10 items-center justify-center rounded-2xl border border-white/10 bg-white/5 text-primary">
-                <HugeiconsIcon icon={User03Icon} size={22} color="currentColor" strokeWidth={1.6} />
+                <HugeiconsIcon
+                  icon={User03Icon}
+                  size={22}
+                  color="currentColor"
+                  strokeWidth={1.6}
+                />
               </span>
               <span>
                 <span className="block text-sm font-medium text-muted-foreground">
@@ -48,7 +59,10 @@ export default async function Page({
           </div>
         </header>
 
-        <section id="top" className="grid items-start gap-10 lg:grid-cols-[1.08fr_0.92fr] lg:gap-14">
+        <section
+          id="top"
+          className="grid items-start gap-10 lg:grid-cols-[1.08fr_0.92fr] lg:gap-14"
+        >
           <div className="space-y-8">
             <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-medium tracking-[0.24em] text-muted-foreground uppercase">
               {content.hero.eyebrow}
@@ -79,8 +93,12 @@ export default async function Page({
               {content.hero.cards.map((card) => (
                 <Card key={card.title} className="border-white/10 bg-white/5">
                   <CardContent className="space-y-2 p-5">
-                    <p className="font-heading text-sm font-semibold text-foreground">{card.title}</p>
-                    <p className="text-sm leading-6 text-muted-foreground">{card.description}</p>
+                    <p className="font-heading text-sm font-semibold text-foreground">
+                      {card.title}
+                    </p>
+                    <p className="text-sm leading-6 text-muted-foreground">
+                      {card.description}
+                    </p>
                   </CardContent>
                 </Card>
               ))}
@@ -97,9 +115,11 @@ export default async function Page({
                   <h2 className="font-heading text-2xl font-semibold tracking-tight text-foreground">
                     {content.resume.title}
                   </h2>
-                  <p className="max-w-xl text-sm leading-6 text-muted-foreground">
-                    {content.resume.description}
-                  </p>
+                  {content.resume.description ? (
+                    <p className="max-w-xl text-sm leading-6 text-muted-foreground">
+                      {content.resume.description}
+                    </p>
+                  ) : null}
                 </div>
                 <div className="rounded-2xl border border-white/10 bg-black/15 px-3 py-2 text-sm text-muted-foreground">
                   {resumeData.basics.email}
@@ -124,7 +144,12 @@ export default async function Page({
                           {profile.username}
                         </p>
                       </div>
-                      <HugeiconsIcon icon={Globe02Icon} size={20} color="currentColor" strokeWidth={1.6} />
+                      <HugeiconsIcon
+                        icon={Globe02Icon}
+                        size={20}
+                        color="currentColor"
+                        strokeWidth={1.6}
+                      />
                     </div>
                   </a>
                 ))}
@@ -132,12 +157,15 @@ export default async function Page({
 
               <div className="flex flex-wrap gap-3">
                 <Button asChild size="sm">
-                  <a href={resumePdfPath} download>
+                  <a href={resumePdfPath} download className="inline-flex items-center gap-2">
+                    <HugeiconsIcon icon={Download01Icon} size={16} color="currentColor" strokeWidth={1.6} />
                     {content.resume.downloadLabel}
                   </a>
                 </Button>
                 <Button asChild variant="outline" size="sm">
-                  <a href={`mailto:${resumeData.basics.email}`}>{content.contact.email}</a>
+                  <a href={`mailto:${resumeData.basics.email}`}>
+                    {content.contact.email}
+                  </a>
                 </Button>
               </div>
             </CardContent>
@@ -154,20 +182,31 @@ export default async function Page({
                 {content.projects.title}
               </h2>
             </div>
-            <p className="max-w-xl text-sm leading-6 text-muted-foreground">
-              {content.projects.description}
-            </p>
+            {content.projects.description ? (
+              <p className="max-w-xl text-sm leading-6 text-muted-foreground">
+                {content.projects.description}
+              </p>
+            ) : null}
           </div>
 
           <div className="grid gap-5 lg:grid-cols-2">
             {resumeData.projects.map((project) => (
-              <Card key={project.title} className="border-white/10 bg-white/5 transition-transform duration-300 hover:-translate-y-1 hover:border-white/20">
+              <Card
+                key={project.title}
+                className="border-white/10 bg-white/5 transition-transform duration-300 hover:-translate-y-1 hover:border-white/20"
+              >
                 <CardHeader className="space-y-3 pb-0">
-                  <CardTitle className="text-xl text-foreground">{project.title}</CardTitle>
-                  <CardDescription className="text-sm text-primary/90">{project.meta}</CardDescription>
+                  <CardTitle className="text-xl text-foreground">
+                    {project.title}
+                  </CardTitle>
+                  <CardDescription className="text-sm text-primary/90">
+                    {project.meta}
+                  </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-6 pt-4">
-                  <p className="text-sm leading-6 text-muted-foreground">{project.detail}</p>
+                  <p className="text-sm leading-6 text-muted-foreground">
+                    {project.detail}
+                  </p>
                   {project.link ? (
                     <a
                       href={project.link}
@@ -176,7 +215,12 @@ export default async function Page({
                       className="inline-flex items-center gap-2 text-sm font-medium text-foreground underline decoration-white/20 underline-offset-4"
                     >
                       Open link
-                      <HugeiconsIcon icon={Link04Icon} size={16} color="currentColor" strokeWidth={1.6} />
+                      <HugeiconsIcon
+                        icon={Link04Icon}
+                        size={16}
+                        color="currentColor"
+                        strokeWidth={1.6}
+                      />
                     </a>
                   ) : null}
                 </CardContent>
@@ -195,9 +239,11 @@ export default async function Page({
                 {content.resume.title}
               </h2>
             </div>
-            <p className="max-w-xl text-sm leading-6 text-muted-foreground">
-              {content.resume.description}
-            </p>
+            {content.resume.description ? (
+              <p className="max-w-xl text-sm leading-6 text-muted-foreground">
+                {content.resume.description}
+              </p>
+            ) : null}
           </div>
 
           <div className="grid gap-5 lg:grid-cols-3">
@@ -207,8 +253,12 @@ export default async function Page({
                   <p className="text-xs font-medium tracking-[0.24em] text-muted-foreground uppercase">
                     {content.resume.profileLabel}
                   </p>
-                  <p className="font-heading text-2xl font-semibold text-foreground">{resumeData.basics.name}</p>
-                  <p className="text-sm leading-6 text-muted-foreground">{resumeData.basics.email}</p>
+                  <p className="font-heading text-2xl font-semibold text-foreground">
+                    {resumeData.basics.name}
+                  </p>
+                  <p className="text-sm leading-6 text-muted-foreground">
+                    {resumeData.basics.email}
+                  </p>
                 </div>
 
                 <div className="space-y-3">
@@ -221,13 +271,16 @@ export default async function Page({
                       className="flex items-center justify-between gap-3 rounded-2xl border border-white/10 bg-black/15 px-4 py-3 text-sm text-foreground transition-colors hover:border-white/20 hover:bg-black/20"
                     >
                       <span>{profile.network}</span>
-                      <span className="text-muted-foreground">{profile.username}</span>
+                      <span className="text-muted-foreground">
+                        {profile.username}
+                      </span>
                     </a>
                   ))}
                 </div>
 
                 <Button asChild className="w-full" variant="outline">
-                  <a href={resumePdfPath} download>
+                  <a href={resumePdfPath} download className="inline-flex items-center justify-center gap-2">
+                    <HugeiconsIcon icon={Download01Icon} size={16} color="currentColor" strokeWidth={1.6} />
                     {content.resume.downloadLabel}
                   </a>
                 </Button>
@@ -242,12 +295,21 @@ export default async function Page({
                   </p>
                   <div className="space-y-4">
                     {resumeData.experience.map((item) => (
-                      <div key={item.title} className="rounded-2xl border border-white/10 bg-black/15 p-4">
+                      <div
+                        key={item.title}
+                        className="rounded-2xl border border-white/10 bg-black/15 p-4"
+                      >
                         <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">
-                          <p className="font-heading text-lg font-semibold text-foreground">{item.title}</p>
-                          <p className="text-sm text-muted-foreground">{item.meta}</p>
+                          <p className="font-heading text-lg font-semibold text-foreground">
+                            {item.title}
+                          </p>
+                          <p className="text-sm text-muted-foreground">
+                            {item.meta}
+                          </p>
                         </div>
-                        <p className="mt-3 text-sm leading-6 text-muted-foreground">{item.detail}</p>
+                        <p className="mt-3 text-sm leading-6 text-muted-foreground">
+                          {item.detail}
+                        </p>
                       </div>
                     ))}
                   </div>
@@ -262,10 +324,19 @@ export default async function Page({
                     </p>
                     <div className="space-y-4">
                       {resumeData.education.map((item) => (
-                        <div key={item.title} className="rounded-2xl border border-white/10 bg-black/15 p-4">
-                          <p className="font-heading text-base font-semibold text-foreground">{item.title}</p>
-                          <p className="mt-1 text-sm text-muted-foreground">{item.meta}</p>
-                          <p className="mt-3 text-sm leading-6 text-muted-foreground">{item.detail}</p>
+                        <div
+                          key={item.title}
+                          className="rounded-2xl border border-white/10 bg-black/15 p-4"
+                        >
+                          <p className="font-heading text-base font-semibold text-foreground">
+                            {item.title}
+                          </p>
+                          <p className="mt-1 text-sm text-muted-foreground">
+                            {item.meta}
+                          </p>
+                          <p className="mt-3 text-sm leading-6 text-muted-foreground">
+                            {item.detail}
+                          </p>
                         </div>
                       ))}
                     </div>
@@ -279,7 +350,10 @@ export default async function Page({
                     </p>
                     <div className="flex flex-wrap gap-2">
                       {resumeData.languages.map((language) => (
-                        <span key={language.language} className="rounded-full border border-white/10 bg-black/15 px-3 py-1.5 text-sm font-medium text-foreground">
+                        <span
+                          key={language.language}
+                          className="rounded-full border border-white/10 bg-black/15 px-3 py-1.5 text-sm font-medium text-foreground"
+                        >
                           {language.language} · {language.fluency}
                         </span>
                       ))}
@@ -290,7 +364,10 @@ export default async function Page({
                       </p>
                       <div className="flex flex-wrap gap-2">
                         {resumeData.skills.map((skill) => (
-                          <span key={skill} className="rounded-full border border-white/10 bg-black/15 px-3 py-1.5 text-sm font-medium text-foreground">
+                          <span
+                            key={skill}
+                            className="rounded-full border border-white/10 bg-black/15 px-3 py-1.5 text-sm font-medium text-foreground"
+                          >
                             {skill}
                           </span>
                         ))}
@@ -303,14 +380,23 @@ export default async function Page({
           </div>
         </section>
 
-        <section id="experience" className="grid gap-6 lg:grid-cols-[0.92fr_1.08fr]">
+        <section
+          id="experience"
+          className="grid gap-6 lg:grid-cols-[0.92fr_1.08fr]"
+        >
           <Card className="border-white/10 bg-white/5">
             <CardContent className="space-y-4 p-6">
               <p className="text-xs font-medium tracking-[0.24em] text-muted-foreground uppercase">
                 {content.skills.eyebrow}
               </p>
-              <h2 className="font-heading text-3xl font-semibold tracking-tight text-foreground">{content.skills.title}</h2>
-              <p className="text-sm leading-6 text-muted-foreground">{content.skills.description}</p>
+              <h2 className="font-heading text-3xl font-semibold tracking-tight text-foreground">
+                {content.skills.title}
+              </h2>
+              {content.skills.description ? (
+                <p className="text-sm leading-6 text-muted-foreground">
+                  {content.skills.description}
+                </p>
+              ) : null}
             </CardContent>
           </Card>
 
@@ -319,8 +405,14 @@ export default async function Page({
               {content.experience.eyebrow}
             </p>
             <div className="space-y-3">
-              <h2 className="font-heading text-3xl font-semibold tracking-tight text-foreground">{content.experience.title}</h2>
-              <p className="max-w-2xl text-sm leading-6 text-muted-foreground">{content.experience.description}</p>
+              <h2 className="font-heading text-3xl font-semibold tracking-tight text-foreground">
+                {content.experience.title}
+              </h2>
+              {content.experience.description ? (
+                <p className="max-w-2xl text-sm leading-6 text-muted-foreground">
+                  {content.experience.description}
+                </p>
+              ) : null}
             </div>
             <div className="space-y-4">
               {resumeData.experience.map((item) => (
@@ -328,8 +420,12 @@ export default async function Page({
                   <CardContent className="flex gap-4 p-5">
                     <div className="mt-1 h-3 w-3 rounded-full bg-primary shadow-[0_0_0_6px_rgba(125,211,192,0.15)]" />
                     <div className="space-y-3">
-                      <p className="font-heading text-lg font-semibold text-foreground">{item.title}</p>
-                      <p className="text-sm leading-6 text-muted-foreground">{item.detail}</p>
+                      <p className="font-heading text-lg font-semibold text-foreground">
+                        {item.title}
+                      </p>
+                      <p className="text-sm leading-6 text-muted-foreground">
+                        {item.detail}
+                      </p>
                     </div>
                   </CardContent>
                 </Card>
@@ -348,22 +444,31 @@ export default async function Page({
                 <h2 className="font-heading text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
                   {content.contact.title}
                 </h2>
-                <p className="max-w-2xl text-sm leading-6 text-muted-foreground">
-                  {content.contact.description}
-                </p>
+                {content.contact.description ? (
+                  <p className="max-w-2xl text-sm leading-6 text-muted-foreground">
+                    {content.contact.description}
+                  </p>
+                ) : null}
               </div>
 
               <div className="flex flex-wrap gap-3 lg:justify-end">
                 <Button asChild size="lg">
-                  <a href={`mailto:${resumeData.basics.email}`}>{content.contact.email}</a>
+                  <a href={`mailto:${resumeData.basics.email}`}>
+                    {content.contact.email}
+                  </a>
                 </Button>
                 <Button asChild variant="outline" size="lg">
-                  <a href="https://github.com/Isa-30a" target="_blank" rel="noreferrer">
+                  <a
+                    href="https://github.com/Isa-30a"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     {content.contact.github}
                   </a>
                 </Button>
                 <Button asChild variant="ghost" size="lg">
-                  <a href={resumePdfPath} download>
+                  <a href={resumePdfPath} download className="inline-flex items-center gap-2">
+                    <HugeiconsIcon icon={Download01Icon} size={16} color="currentColor" strokeWidth={1.6} />
                     {content.contact.resume}
                   </a>
                 </Button>
