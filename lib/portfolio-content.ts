@@ -78,17 +78,19 @@ export const portfolioContent = {
       tertiaryAction: "Contact",
       cards: [
         {
-          title: "Frontend Engineer",
+          title: "User-Centered Development",
           description:
-            "Building with React, Next.js, and modern web technologies.",
+            "I build interfaces with a strong focus on usability, accessibility, and user experience.",
         },
         {
-          title: "Full-Stack Thinking",
-          description: "Comfortable working across the stack — from UI to API.",
+          title: "Modern Frontend",
+          description:
+            "Experienced with Next.js, React, Vue, and TypeScript to create performant web applications.",
         },
         {
-          title: "Always Learning",
-          description: "Exploring new tools and improving my craft every day.",
+          title: "Continuous Learning",
+          description:
+            "Constantly exploring new technologies, best practices, and frontend architecture patterns.",
         },
       ],
     },
@@ -152,17 +154,19 @@ export const portfolioContent = {
       tertiaryAction: "Contacto",
       cards: [
         {
-          title: "Ingeniera Frontend",
+          title: "Desarrollo Centrado en Usuario",
           description:
-            "Construyendo con React, Next.js y tecnologías modernas.",
+            "Construyo interfaces con un fuerte enfoque en usabilidad, accesibilidad y experiencia de usuario.",
         },
         {
-          title: "Pensamiento Full-Stack",
-          description: "Cómoda trabajando en todo el stack — del UI a la API.",
+          title: "Frontend Moderno",
+          description:
+            "Experiencia con Next.js, React, Vue y TypeScript para crear aplicaciones web eficientes.",
         },
         {
-          title: "Siempre Aprendiendo",
-          description: "Explorando nuevas herramientas y mejorando cada día.",
+          title: "Aprendizaje Continuo",
+          description:
+            "Explorando constantemente nuevas tecnologías, buenas prácticas y patrones de arquitectura frontend.",
         },
       ],
     },

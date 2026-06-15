@@ -1,5 +1,5 @@
 import { HugeiconsIcon } from "@hugeicons/react"
-import { Globe02Icon, Link04Icon, User03Icon } from "@hugeicons/core-free-icons"
+import { Book01Icon, BrowserIcon, CodeIcon, Github01Icon, Globe02Icon, Link04Icon, Linkedin01Icon, User03Icon } from "@hugeicons/core-free-icons"
 import { notFound } from "next/navigation"
 
 import { Button } from "@/components/ui/button"
@@ -85,9 +85,17 @@ export default async function Page({
             </div>
 
             <div className="grid gap-4 sm:grid-cols-3">
-              {content.hero.cards.map((card) => (
+              {content.hero.cards.map((card, i) => (
                 <Card key={card.title} className="border-white/10 bg-white/5">
-                  <CardContent className="space-y-2 p-5">
+                  <CardContent className="space-y-3 p-5">
+                    <HugeiconsIcon
+                      icon={
+                        i === 0 ? BrowserIcon : i === 1 ? CodeIcon : Book01Icon
+                      }
+                      size={22}
+                      color="currentColor"
+                      strokeWidth={1.6}
+                    />
                     <p className="font-heading text-sm font-semibold text-foreground">
                       {card.title}
                     </p>
@@ -139,8 +147,14 @@ export default async function Page({
                           {profile.username}
                         </p>
                       </div>
-                      <HugeiconsIcon
-                        icon={Globe02Icon}
+                       <HugeiconsIcon
+                        icon={
+                          profile.network.toLowerCase() === "linkedin"
+                            ? Linkedin01Icon
+                            : profile.network.toLowerCase() === "github"
+                              ? Github01Icon
+                              : Globe02Icon
+                        }
                         size={20}
                         color="currentColor"
                         strokeWidth={1.6}
