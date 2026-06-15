@@ -45,13 +45,8 @@ export default async function Page({
                   strokeWidth={1.6}
                 />
               </span>
-              <span>
-                <span className="block text-sm font-medium text-muted-foreground">
-                  {locale === "es" ? "Portafolio de" : "Portfolio of"}
-                </span>
-                <span className="font-heading text-lg font-semibold tracking-tight text-foreground">
-                  Isabella Alvarado
-                </span>
+              <span className="font-heading text-lg font-semibold tracking-tight text-foreground">
+                Isabella Alvarado
               </span>
             </a>
 
@@ -287,96 +282,43 @@ export default async function Page({
               </CardContent>
             </Card>
 
-            <div className="grid gap-5 lg:col-span-2">
-              <Card className="border-white/10 bg-white/5">
-                <CardContent className="space-y-4 p-6">
-                  <p className="text-xs font-medium tracking-[0.24em] text-muted-foreground uppercase">
-                    {content.experience.eyebrow}
-                  </p>
-                  <div className="space-y-4">
-                    {resumeData.experience.map((item) => (
-                      <div
-                        key={item.title}
-                        className="rounded-2xl border border-white/10 bg-black/15 p-4"
-                      >
-                        <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">
-                          <p className="font-heading text-lg font-semibold text-foreground">
-                            {item.title}
-                          </p>
-                          <p className="text-sm text-muted-foreground">
-                            {item.meta}
-                          </p>
-                        </div>
-                        <p className="mt-3 text-sm leading-6 text-muted-foreground">
-                          {item.detail}
-                        </p>
-                      </div>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-
-              <div className="grid gap-5 md:grid-cols-2">
-                <Card className="border-white/10 bg-white/5">
-                  <CardContent className="space-y-4 p-6">
-                    <p className="text-xs font-medium tracking-[0.24em] text-muted-foreground uppercase">
-                      {content.resume.educationLabel}
-                    </p>
-                    <div className="space-y-4">
-                      {resumeData.education.map((item) => (
-                        <div
-                          key={item.title}
-                          className="rounded-2xl border border-white/10 bg-black/15 p-4"
-                        >
-                          <p className="font-heading text-base font-semibold text-foreground">
-                            {item.title}
-                          </p>
-                          <p className="mt-1 text-sm text-muted-foreground">
-                            {item.meta}
-                          </p>
-                          <p className="mt-3 text-sm leading-6 text-muted-foreground">
-                            {item.detail}
-                          </p>
-                        </div>
-                      ))}
-                    </div>
-                  </CardContent>
-                </Card>
-
-                <Card className="border-white/10 bg-white/5">
-                  <CardContent className="space-y-4 p-6">
-                    <p className="text-xs font-medium tracking-[0.24em] text-muted-foreground uppercase">
-                      {content.resume.languagesLabel}
-                    </p>
-                    <div className="flex flex-wrap gap-2">
-                      {resumeData.languages.map((language) => (
-                        <span
-                          key={language.language}
-                          className="rounded-full border border-white/10 bg-black/15 px-3 py-1.5 text-sm font-medium text-foreground"
-                        >
-                          {language.language} · {language.fluency}
-                        </span>
-                      ))}
-                    </div>
-                    <div className="space-y-3 pt-2">
-                      <p className="text-xs font-medium tracking-[0.24em] text-muted-foreground uppercase">
-                        {content.skills.eyebrow}
+            <Card className="border-white/10 bg-white/5 lg:col-span-2">
+              <CardContent className="space-y-4 p-6">
+                <p className="text-xs font-medium tracking-[0.24em] text-muted-foreground uppercase">
+                  {content.resume.educationLabel}
+                </p>
+                <div className="space-y-4">
+                  {resumeData.education.map((item) => (
+                    <div
+                      key={item.title}
+                      className="rounded-2xl border border-white/10 bg-black/15 p-4"
+                    >
+                      <p className="font-heading text-base font-semibold text-foreground">
+                        {item.title}
                       </p>
-                      <div className="flex flex-wrap gap-2">
-                        {resumeData.skills.map((skill) => (
-                          <span
-                            key={skill}
-                            className="rounded-full border border-white/10 bg-black/15 px-3 py-1.5 text-sm font-medium text-foreground"
-                          >
-                            {skill}
-                          </span>
-                        ))}
-                      </div>
+                      <p className="mt-1 text-sm text-muted-foreground">
+                        {item.meta}
+                      </p>
+                      <p className="mt-3 text-sm leading-6 text-muted-foreground">
+                        {item.detail}
+                      </p>
+                      {item.coursework ? (
+                        <div className="mt-4 flex flex-wrap gap-2">
+                          {item.coursework.map((course) => (
+                            <span
+                              key={course}
+                              className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-medium text-muted-foreground"
+                            >
+                              {course}
+                            </span>
+                          ))}
+                        </div>
+                      ) : null}
                     </div>
-                  </CardContent>
-                </Card>
-              </div>
-            </div>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </section>
 

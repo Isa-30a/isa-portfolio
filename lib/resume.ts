@@ -83,6 +83,7 @@ export type ResumeData = {
     title: string
     meta: string
     detail: string
+    coursework?: string[]
     link?: string
   }>
   projects: Array<{
@@ -124,12 +125,23 @@ export const resumeData: ResumeData = {
     })),
   education: resume.sections.education.items
     .filter((item) => !item.hidden)
-    .map((item) => ({
-      title: `${item.degree} · ${item.school}`,
-      meta: [item.period, item.grade].filter(Boolean).join(" · "),
-      detail: stripHtml(item.description),
-      link: item.website.url || undefined,
-    })),
+    .map((item) => {
+      const text = stripHtml(item.description)
+      const courseworkMatch = text.match(/Relevant coursework:\s*(.+)/)
+      const coursework = courseworkMatch
+        ? courseworkMatch[1].split(",").map((s) => s.trim())
+        : undefined
+      const detail = courseworkMatch
+        ? text.replace(/Relevant coursework:\s*.+$/, "").trim()
+        : text
+      return {
+        title: `${item.degree} · ${item.school}`,
+        meta: [item.period, item.grade].filter(Boolean).join(" · "),
+        detail,
+        coursework,
+        link: item.website.url || undefined,
+      }
+    }),
   projects: resume.sections.projects.items
     .filter((item) => !item.hidden)
     .map((item) => ({

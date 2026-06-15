@@ -65,22 +65,24 @@ export const portfolioContent = {
     },
     hero: {
       eyebrow: "Frontend engineer",
-      title:
-        "I design calm, clear portfolio experiences that feel easy to read.",
+      title: "Frontend Engineer with Full-Stack Reach",
       description:
-        "Isabella is a frontend engineer focused on simple layouts, readable content, and a portfolio that gets out of the way of the work.",
+        "I'm a frontend engineer focused on simple layouts, readable content, and building things that work.",
       primaryAction: "View work",
       secondaryAction: "Open resume",
       tertiaryAction: "Contact",
       cards: [
         {
-          title: "Readable",
-          description: "Content first, with a quieter visual system",
+          title: "Frontend Engineer",
+          description: "Building with React, Next.js, and modern web technologies.",
         },
-        { title: "Direct", description: "Less ceremony, fewer moving parts" },
         {
-          title: "Practical",
-          description: "Resume, projects, and contact in one pass",
+          title: "Full-Stack Thinking",
+          description: "Comfortable working across the stack — from UI to API.",
+        },
+        {
+          title: "Always Learning",
+          description: "Exploring new tools and improving my craft every day.",
         },
       ],
     },
@@ -127,24 +129,24 @@ export const portfolioContent = {
     },
     hero: {
       eyebrow: "Ingeniera frontend",
-      title: "Diseño portafolios simples, claros y fáciles de leer.",
+      title: "Ingeniera Frontend con Alcance Full-Stack",
       description:
-        "Isabella es una ingeniera frontend enfocada en estructuras limpias, contenido legible y un portafolio que no compita con el trabajo.",
+        "Soy ingeniera frontend enfocada en estructuras limpias, contenido legible y construir cosas que funcionan.",
       primaryAction: "Ver trabajo",
       secondaryAction: "Abrir CV",
       tertiaryAction: "Contacto",
       cards: [
         {
-          title: "Legible",
-          description: "Contenido primero y sistema visual contenido",
+          title: "Ingeniera Frontend",
+          description: "Construyendo con React, Next.js y tecnologías modernas.",
         },
         {
-          title: "Directo",
-          description: "Menos ruido, menos capas, menos fricción",
+          title: "Pensamiento Full-Stack",
+          description: "Cómoda trabajando en todo el stack — del UI a la API.",
         },
         {
-          title: "Práctico",
-          description: "CV, proyectos y contacto en una sola vista",
+          title: "Siempre Aprendiendo",
+          description: "Explorando nuevas herramientas y mejorando cada día.",
         },
       ],
     },
