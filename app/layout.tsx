@@ -2,7 +2,6 @@ import { Geist_Mono, Inter, Space_Grotesk } from "next/font/google"
 import { headers } from "next/headers"
 
 import "./globals.css"
-import { ThemeProvider } from "@/components/theme-provider"
 import { cn } from "@/lib/utils"
 
 const spaceGroteskHeading = Space_Grotesk({
@@ -37,7 +36,6 @@ export default async function RootLayout({
   return (
     <html
       lang={locale}
-      suppressHydrationWarning
       className={cn(
         "antialiased",
         fontMono.variable,
@@ -47,7 +45,7 @@ export default async function RootLayout({
       )}
     >
       <body className="min-h-screen bg-background text-foreground">
-        <ThemeProvider>{children}</ThemeProvider>
+        {children}
       </body>
     </html>
   )

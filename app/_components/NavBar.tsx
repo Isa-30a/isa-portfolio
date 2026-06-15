@@ -1,7 +1,3 @@
-"use client"
-
-import { useTheme } from "next-themes"
-
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import type { Locale } from "@/lib/i18n"
@@ -18,7 +14,6 @@ type NavBarProps = {
 }
 
 export const NavBar = ({ locale, nav }: NavBarProps) => {
-  const { resolvedTheme, setTheme } = useTheme()
   const nextLocale: Locale = locale === "en" ? "es" : "en"
 
   return (
@@ -37,13 +32,6 @@ export const NavBar = ({ locale, nav }: NavBarProps) => {
       </Button>
       <Button variant="outline" size="sm" asChild>
         <Link href={`/${nextLocale}`}>{nav.localeLabel}</Link>
-      </Button>
-      <Button
-        variant="outline"
-        size="sm"
-        onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
-      >
-        {resolvedTheme === "dark" ? "Light mode" : "Dark mode"}
       </Button>
     </div>
   )
