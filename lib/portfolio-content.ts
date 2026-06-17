@@ -1,6 +1,6 @@
 import type { Locale } from "./i18n"
 
-type LocaleContent = {
+export type LocaleContent = {
   nav: {
     skills: string
     projects: string
