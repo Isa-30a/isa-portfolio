@@ -85,24 +85,19 @@ export default async function Page({
             </div>
           </div>
           <Card className="border-white/10 bg-white/5 shadow-2xl shadow-black/20 backdrop-blur">
-            <CardContent className="space-y-6 p-6">
-              <div className="flex items-start justify-between gap-4">
-                <div className="space-y-2">
-                  <p className="text-xs font-medium tracking-[0.24em] text-muted-foreground uppercase">
-                    {content.resume.eyebrow}
+            <CardContent className="space-y-8 p-6">
+              <div className="space-y-2">
+                <p className="text-xs font-medium tracking-[0.24em] text-muted-foreground uppercase">
+                  {content.resume.eyebrow}
+                </p>
+                <h2 className="font-heading text-2xl font-semibold tracking-tight text-foreground">
+                  {content.resume.title}
+                </h2>
+                {content.resume.description ? (
+                  <p className="text-sm leading-6 text-muted-foreground">
+                    {content.resume.description}
                   </p>
-                  <h2 className="font-heading text-2xl font-semibold tracking-tight text-foreground">
-                    {content.resume.title}
-                  </h2>
-                  {content.resume.description ? (
-                    <p className="max-w-xl text-sm leading-6 text-muted-foreground">
-                      {content.resume.description}
-                    </p>
-                  ) : null}
-                </div>
-                <div className="rounded-2xl border border-white/10 bg-black/15 px-3 py-2 text-sm text-muted-foreground">
-                  {resumeData.basics.email}
-                </div>
+                ) : null}
               </div>
 
               <div className="grid gap-3 sm:grid-cols-2">
@@ -114,39 +109,39 @@ export default async function Page({
                     rel="noreferrer"
                     className="rounded-2xl border border-white/10 bg-black/15 p-4 transition-colors hover:border-white/20 hover:bg-black/20"
                   >
-                    <div className="flex items-center justify-between gap-3">
-                      <div>
+                    <div className="flex items-center gap-4">
+                      <div className="flex size-10 shrink-0 items-center justify-center rounded-xl border border-white/10 bg-white/5">
+                        <HugeiconsIcon
+                          icon={
+                            profile.network.toLowerCase() === "linkedin"
+                              ? Linkedin01Icon
+                              : profile.network.toLowerCase() === "github"
+                                ? Github01Icon
+                                : Globe02Icon
+                          }
+                          size={18}
+                          color="currentColor"
+                          strokeWidth={1.6}
+                        />
+                      </div>
+                      <div className="min-w-0 flex-1">
                         <p className="text-xs font-medium tracking-[0.24em] text-muted-foreground uppercase">
                           {profile.network}
                         </p>
-                        <p className="mt-2 font-heading text-lg font-semibold text-foreground">
+                        <p className="mt-0.5 truncate font-heading text-base font-semibold text-foreground">
                           {profile.username}
                         </p>
                       </div>
-                       <HugeiconsIcon
-                        icon={
-                          profile.network.toLowerCase() === "linkedin"
-                            ? Linkedin01Icon
-                            : profile.network.toLowerCase() === "github"
-                              ? Github01Icon
-                              : Globe02Icon
-                        }
-                        size={20}
-                        color="currentColor"
-                        strokeWidth={1.6}
-                      />
                     </div>
                   </a>
                 ))}
               </div>
 
-              <div className="flex flex-wrap gap-3">
-                <Button asChild variant="outline" size="sm">
-                  <a href={`mailto:${resumeData.basics.email}`}>
-                    {content.contact.email}
-                  </a>
-                </Button>
-              </div>
+              <Button asChild variant="outline" className="w-full">
+                <a href={`mailto:${resumeData.basics.email}`}>
+                  {content.contact.email}
+                </a>
+              </Button>
             </CardContent>
           </Card>
         </section>
