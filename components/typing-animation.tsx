@@ -44,10 +44,9 @@ export function TypingAnimation({
 
   return (
     <span className={cn("inline", className)}>
-      {displayed}
-      <span
+      {displayed}<span
         className={cn(
-          "ml-0.5 inline-block w-[1px] h-[0.85em] bg-foreground align-middle transition-opacity",
+          "inline-block w-[1px] h-[0.85em] bg-foreground align-middle transition-opacity",
           !showCursor && "opacity-0"
         )}
       />
