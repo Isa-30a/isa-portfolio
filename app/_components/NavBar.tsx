@@ -80,7 +80,7 @@ export const NavBar = ({ locale, nav }: NavBarProps) => {
       {isOpen && (
         <>
           <div
-            className="fixed inset-x-0 bottom-0 top-[4.5rem] z-40 lg:hidden"
+            className="fixed inset-x-0 bottom-0 top-18 z-40 lg:hidden"
             onClick={close}
           />
           <div className="absolute left-0 right-0 top-full z-50 mt-2 px-4 lg:hidden animate-in fade-in slide-in-from-top-2">
