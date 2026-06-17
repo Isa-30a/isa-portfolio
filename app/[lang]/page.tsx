@@ -192,14 +192,16 @@ export default async function Page({
               {content.hero.cards.map((card, i) => (
                 <Card key={card.title} className="border-white/10 bg-white/5">
                   <CardHeader className="gap-3">
-                    <HugeiconsIcon
-                      icon={
-                        i === 0 ? BrowserIcon : i === 1 ? CodeIcon : Book01Icon
-                      }
-                      size={22}
-                      color="currentColor"
-                      strokeWidth={1.6}
-                    />
+                    <div className="flex size-10 items-center justify-center rounded-xl border border-primary/20 bg-primary/10 text-primary">
+                      <HugeiconsIcon
+                        icon={
+                          i === 0 ? BrowserIcon : i === 1 ? CodeIcon : Book01Icon
+                        }
+                        size={22}
+                        color="currentColor"
+                        strokeWidth={1.6}
+                      />
+                    </div>
                     <CardTitle className="font-heading text-sm font-semibold text-foreground">
                       {card.title}
                     </CardTitle>
@@ -208,6 +210,37 @@ export default async function Page({
                     </CardDescription>
                   </CardHeader>
                 </Card>
+              ))}
+            </div>
+          </section>
+        </AnimatedSection>
+
+        <AnimatedSection delay={100}>
+          <section id="skills" className="space-y-6">
+            <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+              <div>
+                <p className="text-xs font-medium tracking-[0.24em] text-muted-foreground uppercase">
+                  {content.skills.eyebrow}
+                </p>
+                <h2 className="font-heading text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
+                  {content.skills.title}
+                </h2>
+                <div className="mt-3 h-1 w-14 rounded-full bg-gradient-to-r from-primary to-primary/30" />
+              </div>
+              {content.skills.description ? (
+                <p className="max-w-xl text-sm leading-6 text-muted-foreground">
+                  {content.skills.description}
+                </p>
+              ) : null}
+            </div>
+            <div className="flex flex-wrap gap-3">
+              {resumeData.skills.map((skill) => (
+                <span
+                  key={skill}
+                  className="rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs font-medium tracking-wide text-muted-foreground transition-colors hover:border-white/20 hover:text-foreground"
+                >
+                  {skill}
+                </span>
               ))}
             </div>
           </section>

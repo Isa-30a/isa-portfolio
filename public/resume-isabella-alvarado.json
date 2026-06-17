@@ -254,6 +254,16 @@
           "proficiency": "",
           "level": 0,
           "keywords": []
+        },
+        {
+          "id": "vue-skill-001",
+          "hidden": false,
+          "icon": "",
+          "iconColor": "",
+          "name": "Vue",
+          "proficiency": "",
+          "level": 0,
+          "keywords": []
         }
       ]
     },
