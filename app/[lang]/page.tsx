@@ -11,6 +11,7 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 import { AnimatedSection } from "@/components/animated-section"
+import { TypingAnimation } from "@/components/typing-animation"
 import { NavBar } from "../_components/NavBar"
 import { isLocale, type Locale } from "@/lib/i18n"
 import { portfolioContent } from "@/lib/portfolio-content"
@@ -65,8 +66,12 @@ export default async function Page({
             </div>
 
             <div className="space-y-6">
-              <h1 className="animate-in fade-in slide-in-from-bottom-6 max-w-4xl font-heading text-5xl leading-[0.95] font-semibold tracking-tight text-foreground duration-700 delay-100 sm:text-6xl lg:text-7xl">
-                {content.hero.title}
+              <h1 className="max-w-4xl font-heading text-5xl leading-[0.95] font-semibold tracking-tight text-foreground sm:text-6xl lg:text-7xl">
+                <TypingAnimation
+                  text={content.hero.title}
+                  speed={45}
+                  startDelay={600}
+                />
               </h1>
               <p className="animate-in fade-in slide-in-from-bottom-6 max-w-2xl text-base leading-7 text-pretty text-muted-foreground duration-700 delay-200 sm:text-lg">
                 {content.hero.description}
