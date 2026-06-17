@@ -10,6 +10,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
+import { AnimatedSection } from "@/components/animated-section"
 import { NavBar } from "../_components/NavBar"
 import { isLocale, type Locale } from "@/lib/i18n"
 import { portfolioContent } from "@/lib/portfolio-content"
@@ -59,20 +60,20 @@ export default async function Page({
           className="grid items-start gap-10 lg:grid-cols-[1.08fr_0.92fr] lg:gap-14"
         >
           <div className="space-y-8">
-            <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-medium tracking-[0.24em] text-muted-foreground uppercase">
+            <div className="inline-flex animate-in fade-in slide-in-from-bottom-4 items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-medium tracking-[0.24em] text-muted-foreground uppercase duration-500">
               {content.hero.eyebrow}
             </div>
 
             <div className="space-y-6">
-              <h1 className="max-w-4xl font-heading text-5xl leading-[0.95] font-semibold tracking-tight text-foreground sm:text-6xl lg:text-7xl">
+              <h1 className="animate-in fade-in slide-in-from-bottom-6 max-w-4xl font-heading text-5xl leading-[0.95] font-semibold tracking-tight text-foreground duration-700 delay-100 sm:text-6xl lg:text-7xl">
                 {content.hero.title}
               </h1>
-              <p className="max-w-2xl text-base leading-7 text-pretty text-muted-foreground sm:text-lg">
+              <p className="animate-in fade-in slide-in-from-bottom-6 max-w-2xl text-base leading-7 text-pretty text-muted-foreground duration-700 delay-200 sm:text-lg">
                 {content.hero.description}
               </p>
             </div>
 
-            <div className="flex flex-wrap items-center gap-3">
+            <div className="animate-in fade-in slide-in-from-bottom-6 flex flex-wrap items-center gap-3 duration-700 delay-300">
               <Button asChild size="lg">
                 <a href="#projects">{content.hero.primaryAction}</a>
               </Button>
@@ -84,7 +85,7 @@ export default async function Page({
               </Button>
             </div>
           </div>
-          <Card className="border-white/10 bg-white/5 shadow-2xl shadow-black/20 backdrop-blur">
+          <Card className="animate-in fade-in slide-in-from-right-8 border-white/10 bg-white/5 shadow-2xl shadow-black/20 backdrop-blur duration-700 delay-400">
             <CardHeader className="space-y-2">
               <p className="text-xs font-medium tracking-[0.24em] text-muted-foreground uppercase">
                 {content.resume.eyebrow}
@@ -145,28 +146,29 @@ export default async function Page({
           </Card>
         </section>
 
-        <section id="about" className="grid gap-10 lg:grid-cols-[1.08fr_0.92fr]">
-          <div className="space-y-6">
-            <div>
-              <p className="text-xs font-medium tracking-[0.24em] text-muted-foreground uppercase">
-                {content.about.eyebrow}
-              </p>
-              <h2 className="mt-2 font-heading text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
-                {content.about.title}
-              </h2>
-            </div>
-            <div className="space-y-4">
-              {content.about.paragraphs.map((paragraph, i) => (
-                <p key={i} className="text-sm leading-7 text-muted-foreground">
-                  {paragraph}
+        <AnimatedSection>
+          <section id="about" className="grid gap-10 lg:grid-cols-[1.08fr_0.92fr]">
+            <div className="space-y-6">
+              <div>
+                <p className="text-xs font-medium tracking-[0.24em] text-muted-foreground uppercase">
+                  {content.about.eyebrow}
                 </p>
-              ))}
+                <h2 className="mt-2 font-heading text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
+                  {content.about.title}
+                </h2>
+              </div>
+              <div className="space-y-4">
+                {content.about.paragraphs.map((paragraph, i) => (
+                  <p key={i} className="text-sm leading-7 text-muted-foreground">
+                    {paragraph}
+                  </p>
+                ))}
+              </div>
             </div>
-          </div>
 
-          <div className="grid gap-4">
-            {content.hero.cards.map((card, i) => (
-              <Card key={card.title} className="border-white/10 bg-white/5">
+            <div className="grid gap-4">
+              {content.hero.cards.map((card, i) => (
+                <Card key={card.title} className="border-white/10 bg-white/5">
                 <CardHeader className="gap-3">
                   <HugeiconsIcon
                     icon={
@@ -187,7 +189,9 @@ export default async function Page({
             ))}
           </div>
         </section>
+        </AnimatedSection>
 
+        <AnimatedSection delay={100}>
         <section id="projects" className="space-y-6">
           <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
             <div>
@@ -244,7 +248,9 @@ export default async function Page({
             ))}
           </div>
         </section>
+        </AnimatedSection>
 
+        <AnimatedSection delay={200}>
         <section id="resume" className="space-y-6">
           <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
             <div>
@@ -334,7 +340,9 @@ export default async function Page({
             </Card>
           </div>
         </section>
+        </AnimatedSection>
 
+        <AnimatedSection delay={300}>
         <section id="experience" className="space-y-6">
           <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
             <div>
@@ -374,7 +382,9 @@ export default async function Page({
             ))}
           </div>
         </section>
+        </AnimatedSection>
 
+        <AnimatedSection delay={400}>
         <section id="contact">
           <Card className="border-white/10 bg-white/5">
             <CardContent className="grid gap-6 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
@@ -412,6 +422,7 @@ export default async function Page({
             </CardContent>
           </Card>
         </section>
+        </AnimatedSection>
       </div>
     </main>
   )
