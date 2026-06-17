@@ -101,7 +101,7 @@ export const portfolioContent = {
       title: "I build digital experiences that put people first",
       paragraphs: [
         "I'm passionate about UI Development, where my main focus is on how users truly experience an application once they start interacting with it. I love creating interfaces that feel intuitive, seamless, and enjoyable using Next.js, React, Vue, and TypeScript.",
-        "Beyond coding, I'm also interested in the design side of interfaces — exploring how layout, color, and micro-interactions can transform the way people connect with technology. I enjoy turning ideas into seamless experiences that solve real problems.",
+        "Beyond coding, I'm also interested in the design side of interfaces, exploring how layout, color, and micro-interactions can transform the way people connect with technology. I enjoy turning ideas into seamless experiences that solve real problems.",
         "For me, building products is not just about functionality, but about delivering experiences that users genuinely enjoy. I'm always learning new technologies to create applications that make a meaningful impact.",
       ],
     },
