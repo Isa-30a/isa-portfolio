@@ -1,13 +1,14 @@
 import { HugeiconsIcon } from "@hugeicons/react"
 import {
   Book01Icon,
-  BrowserIcon,
   CodeIcon,
   Github01Icon,
   Globe02Icon,
   Link04Icon,
   Linkedin01Icon,
+  Mail01Icon,
   User03Icon,
+  UserGroupIcon,
 } from "@hugeicons/core-free-icons"
 import { notFound } from "next/navigation"
 
@@ -154,6 +155,12 @@ export default async function Page({
 
               <Button asChild variant="outline" className="w-full">
                 <a href={`mailto:${resumeData.basics.email}`}>
+                  <HugeiconsIcon
+                    icon={Mail01Icon}
+                    size={18}
+                    color="currentColor"
+                    strokeWidth={1.6}
+                  />
                   {content.contact.email}
                 </a>
               </Button>
@@ -195,7 +202,11 @@ export default async function Page({
                     <div className="flex size-10 items-center justify-center rounded-xl border border-primary/20 bg-primary/10 text-primary">
                       <HugeiconsIcon
                         icon={
-                          i === 0 ? BrowserIcon : i === 1 ? CodeIcon : Book01Icon
+                          i === 0
+                            ? UserGroupIcon
+                            : i === 1
+                              ? CodeIcon
+                              : Book01Icon
                         }
                         size={22}
                         color="currentColor"
@@ -467,6 +478,12 @@ export default async function Page({
                 <div className="flex flex-wrap gap-3 lg:justify-end">
                   <Button asChild size="lg">
                     <a href={`mailto:${resumeData.basics.email}`}>
+                      <HugeiconsIcon
+                        icon={Mail01Icon}
+                        size={18}
+                        color="currentColor"
+                        strokeWidth={1.6}
+                      />
                       {content.contact.email}
                     </a>
                   </Button>
@@ -476,6 +493,12 @@ export default async function Page({
                       target="_blank"
                       rel="noreferrer"
                     >
+                      <HugeiconsIcon
+                        icon={Github01Icon}
+                        size={18}
+                        color="currentColor"
+                        strokeWidth={1.6}
+                      />
                       {content.contact.github}
                     </a>
                   </Button>
