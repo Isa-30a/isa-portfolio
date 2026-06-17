@@ -83,31 +83,7 @@ export default async function Page({
                 <a href="#contact">{content.hero.tertiaryAction}</a>
               </Button>
             </div>
-
-            <div className="grid gap-4 sm:grid-cols-3">
-              {content.hero.cards.map((card, i) => (
-                <Card key={card.title} className="border-white/10 bg-white/5">
-                  <CardContent className="space-y-3 p-5">
-                    <HugeiconsIcon
-                      icon={
-                        i === 0 ? BrowserIcon : i === 1 ? CodeIcon : Book01Icon
-                      }
-                      size={22}
-                      color="currentColor"
-                      strokeWidth={1.6}
-                    />
-                    <p className="font-heading text-sm font-semibold text-foreground">
-                      {card.title}
-                    </p>
-                    <p className="text-sm leading-6 text-muted-foreground">
-                      {card.description}
-                    </p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
           </div>
-
           <Card className="border-white/10 bg-white/5 shadow-2xl shadow-black/20 backdrop-blur">
             <CardContent className="space-y-6 p-6">
               <div className="flex items-start justify-between gap-4">
@@ -175,8 +151,8 @@ export default async function Page({
           </Card>
         </section>
 
-        <section id="about" className="space-y-6">
-          <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+        <section id="about" className="grid gap-10 lg:grid-cols-[1.08fr_0.92fr]">
+          <div className="space-y-6">
             <div>
               <p className="text-xs font-medium tracking-[0.24em] text-muted-foreground uppercase">
                 {content.about.eyebrow}
@@ -185,12 +161,35 @@ export default async function Page({
                 {content.about.title}
               </h2>
             </div>
+            <div className="space-y-4">
+              {content.about.paragraphs.map((paragraph, i) => (
+                <p key={i} className="text-sm leading-7 text-muted-foreground">
+                  {paragraph}
+                </p>
+              ))}
+            </div>
           </div>
-          <div className="space-y-4">
-            {content.about.paragraphs.map((paragraph, i) => (
-              <p key={i} className="max-w-3xl text-sm leading-7 text-muted-foreground">
-                {paragraph}
-              </p>
+
+          <div className="grid gap-4">
+            {content.hero.cards.map((card, i) => (
+              <Card key={card.title} className="border-white/10 bg-white/5">
+                <CardContent className="space-y-3 p-5">
+                  <HugeiconsIcon
+                    icon={
+                      i === 0 ? BrowserIcon : i === 1 ? CodeIcon : Book01Icon
+                    }
+                    size={22}
+                    color="currentColor"
+                    strokeWidth={1.6}
+                  />
+                  <p className="font-heading text-sm font-semibold text-foreground">
+                    {card.title}
+                  </p>
+                  <p className="text-sm leading-6 text-muted-foreground">
+                    {card.description}
+                  </p>
+                </CardContent>
+              </Card>
             ))}
           </div>
         </section>
