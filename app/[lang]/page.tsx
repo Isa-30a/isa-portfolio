@@ -85,21 +85,20 @@ export default async function Page({
             </div>
           </div>
           <Card className="border-white/10 bg-white/5 shadow-2xl shadow-black/20 backdrop-blur">
-            <CardContent className="space-y-8 p-6">
-              <div className="space-y-2">
-                <p className="text-xs font-medium tracking-[0.24em] text-muted-foreground uppercase">
-                  {content.resume.eyebrow}
-                </p>
-                <h2 className="font-heading text-2xl font-semibold tracking-tight text-foreground">
-                  {content.resume.title}
-                </h2>
-                {content.resume.description ? (
-                  <p className="text-sm leading-6 text-muted-foreground">
-                    {content.resume.description}
-                  </p>
-                ) : null}
-              </div>
-
+            <CardHeader className="space-y-2">
+              <p className="text-xs font-medium tracking-[0.24em] text-muted-foreground uppercase">
+                {content.resume.eyebrow}
+              </p>
+              <CardTitle className="font-heading text-2xl font-semibold tracking-tight text-foreground">
+                {content.resume.title}
+              </CardTitle>
+              {content.resume.description ? (
+                <CardDescription className="text-sm leading-6">
+                  {content.resume.description}
+                </CardDescription>
+              ) : null}
+            </CardHeader>
+            <CardContent className="space-y-6">
               <div className="grid gap-3 sm:grid-cols-2">
                 {resumeData.profiles.map((profile) => (
                   <a
@@ -168,7 +167,7 @@ export default async function Page({
           <div className="grid gap-4">
             {content.hero.cards.map((card, i) => (
               <Card key={card.title} className="border-white/10 bg-white/5">
-                <CardContent className="space-y-3 p-5">
+                <CardHeader className="gap-3">
                   <HugeiconsIcon
                     icon={
                       i === 0 ? BrowserIcon : i === 1 ? CodeIcon : Book01Icon
@@ -177,13 +176,13 @@ export default async function Page({
                     color="currentColor"
                     strokeWidth={1.6}
                   />
-                  <p className="font-heading text-sm font-semibold text-foreground">
+                  <CardTitle className="font-heading text-sm font-semibold text-foreground">
                     {card.title}
-                  </p>
-                  <p className="text-sm leading-6 text-muted-foreground">
+                  </CardTitle>
+                  <CardDescription className="text-sm leading-6">
                     {card.description}
-                  </p>
-                </CardContent>
+                  </CardDescription>
+                </CardHeader>
               </Card>
             ))}
           </div>
@@ -265,19 +264,18 @@ export default async function Page({
 
           <div className="grid gap-5 lg:grid-cols-3">
             <Card className="border-white/10 bg-white/5 lg:col-span-1">
-              <CardContent className="space-y-5 p-6">
-                <div className="space-y-2">
-                  <p className="text-xs font-medium tracking-[0.24em] text-muted-foreground uppercase">
-                    {content.resume.profileLabel}
-                  </p>
-                  <p className="font-heading text-2xl font-semibold text-foreground">
-                    {resumeData.basics.name}
-                  </p>
-                  <p className="text-sm leading-6 text-muted-foreground">
-                    {resumeData.basics.email}
-                  </p>
-                </div>
-
+              <CardHeader className="space-y-2">
+                <p className="text-xs font-medium tracking-[0.24em] text-muted-foreground uppercase">
+                  {content.resume.profileLabel}
+                </p>
+                <CardTitle className="font-heading text-2xl font-semibold text-foreground">
+                  {resumeData.basics.name}
+                </CardTitle>
+                <CardDescription className="text-sm leading-6">
+                  {resumeData.basics.email}
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
                 <div className="space-y-3">
                   {resumeData.profiles.map((profile) => (
                     <a
@@ -294,45 +292,44 @@ export default async function Page({
                     </a>
                   ))}
                 </div>
-
               </CardContent>
             </Card>
 
             <Card className="border-white/10 bg-white/5 lg:col-span-2">
-              <CardContent className="space-y-4 p-6">
+              <CardHeader>
                 <p className="text-xs font-medium tracking-[0.24em] text-muted-foreground uppercase">
                   {content.resume.educationLabel}
                 </p>
-                <div className="space-y-4">
-                  {resumeData.education.map((item) => (
-                    <div
-                      key={item.title}
-                      className="rounded-2xl border border-white/10 bg-black/15 p-4"
-                    >
-                      <p className="font-heading text-base font-semibold text-foreground">
-                        {item.title}
-                      </p>
-                      <p className="mt-1 text-sm text-muted-foreground">
-                        {item.meta}
-                      </p>
-                      <p className="mt-3 text-sm leading-6 text-muted-foreground">
-                        {item.detail}
-                      </p>
-                      {item.coursework ? (
-                        <div className="mt-4 flex flex-wrap gap-2">
-                          {item.coursework.map((course) => (
-                            <span
-                              key={course}
-                              className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-medium text-muted-foreground"
-                            >
-                              {course}
-                            </span>
-                          ))}
-                        </div>
-                      ) : null}
-                    </div>
-                  ))}
-                </div>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                {resumeData.education.map((item) => (
+                  <div
+                    key={item.title}
+                    className="rounded-2xl border border-white/10 bg-black/15 p-4"
+                  >
+                    <p className="font-heading text-base font-semibold text-foreground">
+                      {item.title}
+                    </p>
+                    <p className="mt-1 text-sm text-muted-foreground">
+                      {item.meta}
+                    </p>
+                    <p className="mt-3 text-sm leading-6 text-muted-foreground">
+                      {item.detail}
+                    </p>
+                    {item.coursework ? (
+                      <div className="mt-4 flex flex-wrap gap-2">
+                        {item.coursework.map((course) => (
+                          <span
+                            key={course}
+                            className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-medium text-muted-foreground"
+                          >
+                            {course}
+                          </span>
+                        ))}
+                      </div>
+                    ) : null}
+                  </div>
+                ))}
               </CardContent>
             </Card>
           </div>
@@ -380,18 +377,18 @@ export default async function Page({
 
         <section id="contact">
           <Card className="border-white/10 bg-white/5">
-            <CardContent className="grid gap-6 p-6 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
+            <CardContent className="grid gap-6 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
               <div className="space-y-3">
                 <p className="text-xs font-medium tracking-[0.24em] text-muted-foreground uppercase">
                   {content.contact.eyebrow}
                 </p>
-                <h2 className="font-heading text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
+                <CardTitle className="font-heading text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
                   {content.contact.title}
-                </h2>
+                </CardTitle>
                 {content.contact.description ? (
-                  <p className="max-w-2xl text-sm leading-6 text-muted-foreground">
+                  <CardDescription className="max-w-2xl text-sm leading-6">
                     {content.contact.description}
-                  </p>
+                  </CardDescription>
                 ) : null}
               </div>
 
