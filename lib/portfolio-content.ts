@@ -75,9 +75,9 @@ export const portfolioContent = {
       title: "Frontend Engineer with Full-Stack Reach",
       description:
         "Frontend Developer and recent Computer Systems Engineering graduate with a strong focus on Next.js, React, Vue, and TypeScript. Passionate about building intuitive, accessible, and user-centered digital experiences that solve real-world problems and create meaningful impact for users.",
-      primaryAction: "View work",
-      secondaryAction: "Open resume",
-      tertiaryAction: "Contact",
+      primaryAction: "See my work",
+      secondaryAction: "Check my resume",
+      tertiaryAction: "Get in touch",
       cards: [
         {
           title: "User-Centered Development",
@@ -152,9 +152,9 @@ export const portfolioContent = {
       title: "Ingeniera Frontend con Alcance Full-Stack",
       description:
         "Frontend Developer recién graduada especializada en Next.js, React, Vue y TypeScript. Apasionada por crear experiencias digitales intuitivas, accesibles y centradas en el usuario, transformando problemas reales en soluciones que generan impacto.",
-      primaryAction: "Ver trabajo",
-      secondaryAction: "Abrir CV",
-      tertiaryAction: "Contacto",
+      primaryAction: "Ver mi trabajo",
+      secondaryAction: "Ver mi CV",
+      tertiaryAction: "Contáctame",
       cards: [
         {
           title: "Desarrollo Centrado en Usuario",
