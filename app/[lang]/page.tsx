@@ -15,7 +15,7 @@ import { TypingAnimation } from "@/components/typing-animation"
 import { NavBar } from "../_components/NavBar"
 import { isLocale, type Locale } from "@/lib/i18n"
 import { portfolioContent } from "@/lib/portfolio-content"
-import { resumeData } from "@/lib/resume"
+import { getResumeData } from "@/lib/resume"
 
 export default async function Page({
   params,
@@ -30,6 +30,7 @@ export default async function Page({
 
   const locale = lang as Locale
   const content = portfolioContent[locale]
+  const resumeData = getResumeData(locale)
 
   return (
     <main className="relative overflow-hidden">
