@@ -100,9 +100,9 @@ export const portfolioContent = {
       eyebrow: "About me",
       title: "I build digital experiences that put people first",
       paragraphs: [
-        "I am a Frontend Developer and recent Computer Systems Engineering graduate passionate about building intuitive, user-centered digital experiences. I specialize in Next.js, React, Vue, and TypeScript, developing modern web applications that combine performance, accessibility, and thoughtful design.",
-        "What motivates me most about software development is seeing how technology can solve real-world problems and improve the way people interact with digital products. I enjoy transforming ideas and requirements into seamless user experiences that are both functional and engaging.",
-        "In addition to frontend development, I have experience working with Flutter, Ruby on Rails, Firebase, Git, Docker, and Figma, allowing me to collaborate effectively across different stages of product development. I am continuously learning new technologies and best practices to create scalable, high-quality applications that deliver meaningful value to users.",
+        "I'm passionate about UI Development, where my main focus is on how users truly experience an application once they start interacting with it. I love creating interfaces that feel intuitive, seamless, and enjoyable using Next.js, React, Vue, and TypeScript.",
+        "Beyond coding, I'm also interested in the design side of interfaces — exploring how layout, color, and micro-interactions can transform the way people connect with technology. I enjoy turning ideas into seamless experiences that solve real problems.",
+        "For me, building products is not just about functionality, but about delivering experiences that users genuinely enjoy. I'm always learning new technologies to create applications that make a meaningful impact.",
       ],
     },
     resume: {
@@ -177,9 +177,9 @@ export const portfolioContent = {
       eyebrow: "Sobre mí",
       title: "Creo experiencias digitales que ponen a las personas primero",
       paragraphs: [
-        "Soy una Frontend Developer recién graduada apasionada por crear experiencias digitales intuitivas y centradas en las personas. Trabajo principalmente con Next.js, React, Vue y TypeScript, desarrollando interfaces modernas que combinan rendimiento, accesibilidad y una excelente experiencia de usuario.",
-        "Disfruto transformar necesidades reales en soluciones digitales funcionales, observando cómo las personas interactúan con el software y cómo una buena experiencia puede simplificar tareas, resolver problemas y generar valor. Además de tecnologías frontend, tengo experiencia con Flutter, Ruby on Rails, Firebase, Git, Docker y Figma, lo que me permite colaborar eficazmente durante todo el ciclo de desarrollo de un producto.",
-        "Actualmente busco seguir creciendo como desarrolladora frontend, construyendo aplicaciones web escalables y experiencias que conecten la tecnología con las necesidades de los usuarios.",
+        "Me apasiona el Desarrollo de Interfaces, donde mi enfoque principal es cómo los usuarios realmente experimentan una aplicación al interactuar con ella. Me encanta crear interfaces intuitivas, fluidas y agradables con Next.js, React, Vue y TypeScript.",
+        "Más allá del código, también me interesa el diseño de interfaces, cómo el layout, el color y las micro-interacciones pueden transformar la forma en que las personas se conectan con la tecnología. Disfruto convertir ideas en experiencias que resuelven problemas reales.",
+        "Para mí, construir productos no se trata solo de funcionalidad, sino de ofrecer experiencias que los usuarios realmente disfruten. Siempre estoy aprendiendo nuevas tecnologías para crear aplicaciones que generen un impacto significativo.",
       ],
     },
     resume: {

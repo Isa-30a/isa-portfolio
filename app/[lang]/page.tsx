@@ -176,7 +176,7 @@ export default async function Page({
                 </h2>
                 <div className="mt-3 h-1 w-14 rounded-full bg-gradient-to-r from-primary to-primary/30" />
               </div>
-              <div className="space-y-4">
+              <div className="space-y-6">
                 {content.about.paragraphs.map((paragraph, i) => (
                   <p
                     key={i}
