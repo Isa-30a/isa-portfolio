@@ -47,8 +47,8 @@ export default async function Page({
       <div className="absolute inset-x-0 top-0 -z-10 h-168 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.08),transparent_30%),radial-gradient(circle_at_top_right,rgba(255,255,255,0.04),transparent_24%)]" />
 
       <div className="mx-auto flex w-full max-w-6xl flex-col gap-18 px-6 py-6 lg:px-8 lg:py-8">
-        <header className="sticky top-4 z-30 rounded-2xl border border-white/10 bg-background/80 px-4 py-3 backdrop-blur-xl">
-          <div className="flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
+        <header className="relative sticky top-4 z-30 rounded-2xl border border-white/10 bg-background/80 px-4 py-3 backdrop-blur-xl">
+          <div className="flex items-center justify-between">
             <a href="#top" className="group inline-flex items-center gap-3">
               <span className="flex size-10 items-center justify-center rounded-2xl border border-white/10 bg-white/5 text-primary">
                 <HugeiconsIcon
