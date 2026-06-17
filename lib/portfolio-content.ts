@@ -2,6 +2,7 @@ import type { Locale } from "./i18n"
 
 type LocaleContent = {
   nav: {
+    skills: string
     projects: string
     resume: string
     experience: string
@@ -62,6 +63,7 @@ type LocaleContent = {
 export const portfolioContent = {
   en: {
     nav: {
+      skills: "Skills",
       projects: "Projects",
       resume: "Resume",
       experience: "Experience",
@@ -120,7 +122,7 @@ export const portfolioContent = {
     skills: {
       eyebrow: "Skills",
       title: "Tools and languages",
-      description: "",
+      description: "Technologies I work with regularly",
     },
     experience: {
       eyebrow: "Experience",
@@ -138,6 +140,7 @@ export const portfolioContent = {
   },
   es: {
     nav: {
+      skills: "Habilidades",
       projects: "Proyectos",
       resume: "CV",
       experience: "Experiencia",
@@ -196,7 +199,7 @@ export const portfolioContent = {
     skills: {
       eyebrow: "Habilidades",
       title: "Herramientas y lenguajes",
-      description: "",
+      description: "Tecnologías con las que trabajo regularmente",
     },
     experience: {
       eyebrow: "Experiencia",

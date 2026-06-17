@@ -5,6 +5,7 @@ import type { Locale } from "@/lib/i18n"
 type NavBarProps = {
   locale: Locale
   nav: {
+    skills: string
     projects: string
     resume: string
     experience: string
@@ -18,6 +19,9 @@ export const NavBar = ({ locale, nav }: NavBarProps) => {
 
   return (
     <div className="flex flex-wrap items-center gap-2">
+      <Button variant="ghost" size="sm" asChild>
+        <a href="#skills">{nav.skills}</a>
+      </Button>
       <Button variant="ghost" size="sm" asChild>
         <a href="#projects">{nav.projects}</a>
       </Button>

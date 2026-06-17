@@ -171,9 +171,10 @@ export default async function Page({
                 <p className="text-xs font-medium tracking-[0.24em] text-muted-foreground uppercase">
                   {content.about.eyebrow}
                 </p>
-                <h2 className="mt-2 font-heading text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
+                <h2 className="font-heading text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
                   {content.about.title}
                 </h2>
+                <div className="mt-3 h-1 w-14 rounded-full bg-gradient-to-r from-primary to-primary/30" />
               </div>
               <div className="space-y-4">
                 {content.about.paragraphs.map((paragraph, i) => (
@@ -191,14 +192,16 @@ export default async function Page({
               {content.hero.cards.map((card, i) => (
                 <Card key={card.title} className="border-white/10 bg-white/5">
                   <CardHeader className="gap-3">
-                    <HugeiconsIcon
-                      icon={
-                        i === 0 ? BrowserIcon : i === 1 ? CodeIcon : Book01Icon
-                      }
-                      size={22}
-                      color="currentColor"
-                      strokeWidth={1.6}
-                    />
+                    <div className="flex size-10 items-center justify-center rounded-xl border border-primary/20 bg-primary/10 text-primary">
+                      <HugeiconsIcon
+                        icon={
+                          i === 0 ? BrowserIcon : i === 1 ? CodeIcon : Book01Icon
+                        }
+                        size={22}
+                        color="currentColor"
+                        strokeWidth={1.6}
+                      />
+                    </div>
                     <CardTitle className="font-heading text-sm font-semibold text-foreground">
                       {card.title}
                     </CardTitle>
@@ -213,15 +216,47 @@ export default async function Page({
         </AnimatedSection>
 
         <AnimatedSection delay={100}>
+          <section id="skills" className="space-y-6">
+            <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+              <div>
+                <p className="text-xs font-medium tracking-[0.24em] text-muted-foreground uppercase">
+                  {content.skills.eyebrow}
+                </p>
+                <h2 className="font-heading text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
+                  {content.skills.title}
+                </h2>
+                <div className="mt-3 h-1 w-14 rounded-full bg-gradient-to-r from-primary to-primary/30" />
+              </div>
+              {content.skills.description ? (
+                <p className="max-w-xl text-sm leading-6 text-muted-foreground">
+                  {content.skills.description}
+                </p>
+              ) : null}
+            </div>
+            <div className="flex flex-wrap gap-3">
+              {resumeData.skills.map((skill) => (
+                <span
+                  key={skill}
+                  className="rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs font-medium tracking-wide text-muted-foreground transition-colors hover:border-white/20 hover:text-foreground"
+                >
+                  {skill}
+                </span>
+              ))}
+            </div>
+          </section>
+        </AnimatedSection>
+
+        <AnimatedSection delay={200}>
           <section id="projects" className="space-y-6">
             <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
               <div>
                 <p className="text-xs font-medium tracking-[0.24em] text-muted-foreground uppercase">
                   {content.projects.eyebrow}
                 </p>
-                <h2 className="mt-2 font-heading text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
+                <h2 className="font-heading text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
                   {content.projects.title}
                 </h2>
+                <div className="mt-3 h-1 w-14 rounded-full bg-gradient-to-r from-primary to-primary/30" />
               </div>
               {content.projects.description ? (
                 <p className="max-w-xl text-sm leading-6 text-muted-foreground">
@@ -271,16 +306,17 @@ export default async function Page({
           </section>
         </AnimatedSection>
 
-        <AnimatedSection delay={200}>
+        <AnimatedSection delay={300}>
           <section id="resume" className="space-y-6">
             <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
               <div>
                 <p className="text-xs font-medium tracking-[0.24em] text-muted-foreground uppercase">
                   {content.resume.eyebrow}
                 </p>
-                <h2 className="mt-2 font-heading text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
+                <h2 className="font-heading text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
                   {content.resume.title}
                 </h2>
+                <div className="mt-3 h-1 w-14 rounded-full bg-gradient-to-r from-primary to-primary/30" />
               </div>
               {content.resume.description ? (
                 <p className="max-w-xl text-sm leading-6 text-muted-foreground">
@@ -363,16 +399,17 @@ export default async function Page({
           </section>
         </AnimatedSection>
 
-        <AnimatedSection delay={300}>
+        <AnimatedSection delay={400}>
           <section id="experience" className="space-y-6">
             <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
               <div>
                 <p className="text-xs font-medium tracking-[0.24em] text-muted-foreground uppercase">
                   {content.experience.eyebrow}
                 </p>
-                <h2 className="mt-2 font-heading text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
+                <h2 className="font-heading text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
                   {content.experience.title}
                 </h2>
+                <div className="mt-3 h-1 w-14 rounded-full bg-gradient-to-r from-primary to-primary/30" />
               </div>
               {content.experience.description ? (
                 <p className="max-w-xl text-sm leading-6 text-muted-foreground">
@@ -408,7 +445,7 @@ export default async function Page({
           </section>
         </AnimatedSection>
 
-        <AnimatedSection delay={400}>
+        <AnimatedSection delay={500}>
           <section id="contact">
             <Card className="border-white/10 bg-white/5">
               <CardContent className="grid gap-6 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
@@ -419,6 +456,7 @@ export default async function Page({
                   <CardTitle className="font-heading text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
                     {content.contact.title}
                   </CardTitle>
+                  <div className="mt-3 h-1 w-14 rounded-full bg-gradient-to-r from-primary to-primary/30" />
                   {content.contact.description ? (
                     <CardDescription className="max-w-2xl text-sm leading-6">
                       {content.contact.description}
